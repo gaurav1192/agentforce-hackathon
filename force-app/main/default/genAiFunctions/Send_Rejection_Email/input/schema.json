@@ -1,0 +1,14 @@
+{
+  "required" : [ "jobApplicationNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "jobApplicationNumber" : {
+      "title" : "jobApplicationNumber",
+      "description" : "This is of Text datatype. It's value will be fetched from the conversation with the HR.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

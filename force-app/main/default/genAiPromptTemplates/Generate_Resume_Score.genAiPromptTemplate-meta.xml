@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_2</activeVersionIdentifier>
+    <developerName>Generate_Resume_Score</developerName>
+    <masterLabel>Generate Resume Score</masterLabel>
+    <templateVersions>
+        <content>You are an AI designed to evaluate how well a candidate&apos;s resume matches a specific job description. Below are the extracted details from the candidate’s resume and the job description for the open position.
+Scoring Criteria (Total = 100 points):
+Technical Skills – {!$Input:Job_Posting.Technical_Skills__c}
+Soft Skills – {!$Input:Job_Posting.Soft_Skills__c}
+Years of Experience – {!$Input:Job_Posting.Years_of_Experience__c}
+Education/Certifications – {!$Input:Job_Posting.Education_Certification__c}
+
+** Instructions **
+1. Carefully identify any Personally Identifiable Information (PII) in {!$Input:Job_Application.Extracted_Data__c} such as:
+Full names
+Email addresses
+Phone numbers
+Social Security Numbers
+Home or work addresses
+Any identification numbers
+Step 2: Replace detected PII with appropriate labels like [REDACTED], [EMAIL], [PHONE], etc.
+Step 3: Compare the above content with the job description provided in {!$Input:Job_Posting.Job_Description__c} and Experience Level Required {!$Input:Job_Posting.Experience_Level__c} across each of the four categories.
+Step 4. Assign a sub-score out of 100 for each category:
+Technical Skills ({!$Input:Job_Posting.Technical_Skills__c} points max)
+Soft Skills ({!$Input:Job_Posting.Soft_Skills__c} points max)
+Years of Experience ({!$Input:Job_Posting.Years_of_Experience__c} points max)
+Education/Certifications ({!$Input:Job_Posting.Education_Certification__c} points max)
+Step 5. Sum the sub-scores to provide a final matching score out of 100.
+Step 6. Only and only provide a single numerical value of the score
+</content>
+        <inputs>
+            <apiName>Job_Application</apiName>
+            <definition>SOBJECT://Job_Application__c</definition>
+            <masterLabel>Job Application</masterLabel>
+            <referenceName>Input:Job_Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Job_Posting</apiName>
+            <definition>SOBJECT://Job_Posting__c</definition>
+            <masterLabel>Job Posting</masterLabel>
+            <referenceName>Input:Job_Posting</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are an AI designed to evaluate how well a candidate&apos;s resume matches a specific job description. Below are the extracted details from the candidate’s resume and the job description for the open position.
+Scoring Criteria (Total = 100 points):
+Technical Skills – {!$Input:Job_Posting.Technical_Skills__c}
+Soft Skills – {!$Input:Job_Posting.Soft_Skills__c}
+Years of Experience – {!$Input:Job_Posting.Years_of_Experience__c}
+Education/Certifications – {!$Input:Job_Posting.Education_Certification__c}
+
+** Instructions **
+Step 1. Carefully identify any Personally Identifiable Information (PII) in {!$Input:Job_Application.Extracted_Data__c} such as:
+Full names
+Email addresses
+Phone numbers
+Social Security Numbers
+Home or work addresses
+Any identification numbers
+Step 2: Remote these detected PII from the above content.
+Step 3: Compare the above content with the job description provided in {!$Input:Job_Posting.Job_Description__c} and Experience Level Required {!$Input:Job_Posting.Experience_Level__c} across each of the four categories.
+Step 4. Assign a sub-score out of 100 for each category:
+Technical Skills ({!$Input:Job_Posting.Technical_Skills__c} points max)
+Soft Skills ({!$Input:Job_Posting.Soft_Skills__c} points max)
+Years of Experience ({!$Input:Job_Posting.Years_of_Experience__c} points max)
+Education/Certifications ({!$Input:Job_Posting.Education_Certification__c} points max)
+Step 5. Sum the sub-scores to provide a final matching score out of 100.
+Step 6. Only and only provide a single numerical value of the score as response.
+</content>
+        <inputs>
+            <apiName>Job_Application</apiName>
+            <definition>SOBJECT://Job_Application__c</definition>
+            <masterLabel>Job Application</masterLabel>
+            <referenceName>Input:Job_Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Job_Posting</apiName>
+            <definition>SOBJECT://Job_Posting__c</definition>
+            <masterLabel>Job Posting</masterLabel>
+            <referenceName>Input:Job_Posting</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

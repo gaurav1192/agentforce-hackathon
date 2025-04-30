@@ -1,0 +1,20 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "jobLocation" : {
+      "title" : "jobLocation",
+      "description" : "This will be a plain text. This should be retrieved from the conversation with the candidate. If not provided by the candidate in the conversation, it should be null.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "jobRole" : {
+      "title" : "jobRole",
+      "description" : "This will be a plain text. This should be retrieved from the conversation with the candidate. If not provided by the candidate in the conversation, it should be null.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

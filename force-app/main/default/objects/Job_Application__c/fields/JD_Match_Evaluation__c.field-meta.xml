@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JD_Match_Evaluation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( VALUE(Score__c) &lt;=50, &apos;Low Match&apos;, IF(AND(VALUE(Score__c) &gt; 50, VALUE(Score__c) &lt;=70), &apos;Moderate Match&apos;, IF(AND(VALUE(Score__c) &gt; 70, VALUE(Score__c) &lt;=90), &apos;Significant Match&apos;,IF(VALUE(Score__c) &gt; 90,&apos;High Match&apos;,null))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>JD Match Evaluation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

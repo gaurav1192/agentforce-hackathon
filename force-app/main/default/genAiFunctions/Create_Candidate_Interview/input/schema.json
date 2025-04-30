@@ -1,0 +1,28 @@
+{
+  "required" : [ "dateTime", "interviewerName", "jobApplicationNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "dateTime" : {
+      "title" : "dateTime",
+      "description" : "Collect data from the user in conversation. It should be in DateTime format.",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "interviewerName" : {
+      "title" : "interviewerName",
+      "description" : "Collect data from the user in conversation. It should be in String format.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "jobApplicationNumber" : {
+      "title" : "jobApplicationNumber",
+      "description" : "Collect data from the user in conversation. It should be in String format. It should be the full name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

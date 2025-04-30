@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action creates or update a contact record based on the personal details provided by the candidate and then creates a new job application record and attach the same contact to it.  This action will be used in the conversation whenever the candidate gives his personal info to apply for a specific job opening.</description>
+    <invocationTarget>Handle_Contact_and_Application</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Handle Contact and Application</masterLabel>
+    <progressIndicatorMessage>Updating...</progressIndicatorMessage>
+</GenAiFunction>

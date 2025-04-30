@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</activeVersionIdentifier>
+    <developerName>Generate_Resume_Summary</developerName>
+    <masterLabel>Generate Resume Summary</masterLabel>
+    <templateVersions>
+        <content>You are a professional resume summarization assistant. Given the resume extracted data {!$Input:Job_Application.Extracted_Data__c}, generate a concise, professional, and easy-to-read overall summary suitable for use by recruiters or hiring managers in max 2000 characters
+</content>
+        <inputs>
+            <apiName>Job_Application</apiName>
+            <definition>SOBJECT://Job_Application__c</definition>
+            <masterLabel>Job Application</masterLabel>
+            <referenceName>Input:Job_Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

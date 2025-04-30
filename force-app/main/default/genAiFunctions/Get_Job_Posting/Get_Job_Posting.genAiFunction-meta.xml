@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action pulls the Job Posting data from the object based on either the filter provided by the candidate or all the job postings.</description>
+    <invocationTarget>Get_Job_Posting</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Get Job Posting</masterLabel>
+    <progressIndicatorMessage>Fetching Job Postings...</progressIndicatorMessage>
+</GenAiFunction>

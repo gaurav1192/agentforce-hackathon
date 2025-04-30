@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This category covers the job inquiry process where the candidate wants to know about all the job openings or based on role or location or both.</description>
+    <developerName>Job_Inquiry_Process</developerName>
+    <genAiFunctions>
+        <functionName>Get_Job_Posting</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>1. When a candidate asks something similar to &quot;What all job openings are there at the company right now?&quot; or  &quot;For what all positions company is hiring for&quot;, then use the &quot;Get Job Posting&quot; action to get the results.</description>
+        <developerName>instruction_whenacandi0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacandi0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>2. When a candidate asks something similar to &quot;What all job openings are there at the particular location in the company right now?&quot; or  &quot;For what all positions company is hiring for at a particular location&quot;, then first fetch the location from the conversation and then use the &quot;Get Job Posting&quot; action by passing the location fetched into the jobLocation parameter of the action to get the results.</description>
+        <developerName>instruction_whenacandi1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacandi1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>3. When a candidate asks something similar to &quot;Is there any opening for a particular role in the company right now?&quot; or  &quot;Is the company is hiring for a particular role&quot;, then first fetch the role from the conversation and then use the &quot;Get Job Posting&quot; by passing the role fetched into the jobRole parameter of the action to get the results.</description>
+        <developerName>instruction_whenacandi2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacandi2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>4. When a candidate asks something similar to &quot;Is there any opening for a particular role at a particular location in the company right now?&quot; or  &quot;Is the company is hiring for a particular role at a particular location&quot;, then first fetch the role and location from the conversation and then use the &quot;Get Job Posting&quot; by passing the role and location fetched into the jobRole and jobLocation parameter respectively of the action to get the results.</description>
+        <developerName>instruction_whenacandi3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacandi3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>5. If the action &quot;Get Job Posting&quot; returns one or more Job Posting record data from Salesforce then show that result in a numbered-bullet format having the label and values of the fields: Title, Experience Level, Open Positions, and Location. And then ask the candidate for which particular role and location they want to apply for and both of these are required to apply.</description>
+        <developerName>instruction_iftheactio4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheactio4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>6. If the action &quot;Get Job Posting&quot; returns anything like blank, null or empty, basically doesn&apos;t return any record, then show a message to the candidate saying something like &quot;Unfortunately, there is no such job opening at the moment.&quot;</description>
+        <developerName>instruction_iftheactio5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheactio5</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Job Inquiry Process</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to do the search on the Job Posting records based on the filters asked by the candidate or none at all.</scope>
+</GenAiPlugin>

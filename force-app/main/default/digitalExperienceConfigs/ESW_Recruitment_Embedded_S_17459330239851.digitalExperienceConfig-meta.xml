@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ESW_Recruitment_Embedded_S_1745933023985</label>
+    <site>
+        <urlPathPrefix>ESWRecruitmentEmbeddedS1745933023985</urlPathPrefix>
+    </site>
+    <space>site/ESW_Recruitment_Embedded_S_17459330239851</space>
+</DigitalExperienceConfig>

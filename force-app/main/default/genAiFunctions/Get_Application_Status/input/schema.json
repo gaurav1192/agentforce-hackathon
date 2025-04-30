@@ -1,0 +1,14 @@
+{
+  "required" : [ "applicationNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "applicationNumber" : {
+      "title" : "applicationNumber",
+      "description" : "This will store text. It's value will be retrieved from the conversation",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

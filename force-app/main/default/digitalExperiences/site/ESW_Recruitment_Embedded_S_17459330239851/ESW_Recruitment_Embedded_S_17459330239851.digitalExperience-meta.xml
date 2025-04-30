@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <digitalExperienceFolderShares/>
+    <label>ESW_Recruitment_Embedded_S_17459330239851</label>
+    <modules>
+        <module>
+            <fullyQualifiedName>sfdc_cms__collection</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+    </modules>
+</DigitalExperienceBundle>

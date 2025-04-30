@@ -1,0 +1,49 @@
+{
+  "required" : [ "email", "firstName", "jobLocation", "jobRole", "lastName", "phone" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "email" : {
+      "title" : "email",
+      "description" : "Data type of this field is email. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "firstName" : {
+      "title" : "firstName",
+      "description" : "Data type of this field is text. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "jobLocation" : {
+      "title" : "jobLocation",
+      "description" : "Data type of this field is text. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "jobRole" : {
+      "title" : "jobRole",
+      "description" : "Data type of this field is text. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "lastName" : {
+      "title" : "lastName",
+      "description" : "Data type of this field is text. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "phone" : {
+      "title" : "phone",
+      "description" : "Data type of this field is number. This is retrieved from the conversation with the candidate.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

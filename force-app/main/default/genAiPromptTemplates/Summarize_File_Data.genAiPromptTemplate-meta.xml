@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Read pdf files and summarize.</description>
+    <developerName>Summarize_File_Data</developerName>
+    <masterLabel>Summarize File Data</masterLabel>
+    <templateVersions>
+        <content>Step 1 - Mask all the PII data.
+Step 2 - summarize the below data - 
+
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Job_Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <versionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

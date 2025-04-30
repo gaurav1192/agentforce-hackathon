@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This category covers the job application process where the candidate will be telling the agent to apply for a specific open job position by providing basic personal info and then uploading the resume.</description>
+    <developerName>Job_Application_Process</developerName>
+    <genAiFunctions>
+        <functionName>Handle_Contact_and_Application</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>1. When a candidate confirms or say Yes that they want to apply for a specific role and location, then pull the role and location from the conversation and then first tell them that okay you got the role and location details from them and now you need the basic details of them like First Name, Last Name, Email, and Phone Number.</description>
+        <developerName>instruction_whenacandi0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenacandi0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>2. Once the candidate provides all the required details First Name, Last Name, Email and Phone Number, then use the &quot;Handle Contact and Application&quot; action to create the contact record if it&apos;s not present and associate a new job application record to it. Pass all the parameters like role, location, first name, last name, email and phone number to the action.</description>
+        <developerName>instruction_oncethecan1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethecan1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>3. If the action &quot;Handle Contact and Application&quot; returns a non-empty string variable application id, then provide the following link as a button with button label &quot;Upload Resume&quot; : https://orgfarm-00bd2ff5af.my.site.com/s/job-application and add the applicationId as parameter to this URL</description>
+        <developerName>instruction_iftheactio2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_iftheactio2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>4. If the action &quot;Handle Contact and Application&quot; returns a blank applicationId as empty, then show a message to the candidate about some technical issues with the application process and it&apos;ll escalate this to the internal team and they&apos;ll reach out to him/her.</description>
+        <developerName>instruction_iftheactio3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_iftheactio3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Job Application Process</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to create a Contact record and a Job Application record for the candidate after he provides basic personal info and you don&apos;t find any such record in the database of the user and then for resume to attach, provide the user a link to a different community page where he can upload the file and submit the application.</scope>
+</GenAiPlugin>

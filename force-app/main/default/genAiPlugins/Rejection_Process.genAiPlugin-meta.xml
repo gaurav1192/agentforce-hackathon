@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This category covers the rejection process.</description>
+    <developerName>Rejection_Process</developerName>
+    <genAiFunctions>
+        <functionName>Send_Rejection_Email</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>1. If the HR asks to send a rejection email by providing the required job Application Number, then use the action &quot;Send Rejection Email&quot; with the required parameter jobApplicationNumber. and then show the output from the &quot;Send Rejection Email&quot; action.</description>
+        <developerName>instruction_ifthehrask0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthehrask0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Rejection Process</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to send a rejection email to the candidate and update their job Application record&apos;s status to Rejected.</scope>
+</GenAiPlugin>

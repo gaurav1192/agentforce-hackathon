@@ -1,0 +1,8 @@
+{
+  "type" : "sfdc_cms__site",
+  "title" : "ESW_Recruitment_Embedded_S_1745933023985",
+  "contentBody" : {
+    "authenticationType" : "AUTHENTICATED_WITH_PUBLIC_ACCESS_ENABLED"
+  },
+  "urlName" : "esw-recruitment-embedded-s-1745933023985"
+}

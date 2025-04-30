@@ -1,0 +1,107 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Full Width Banner Styles */
+.full-width-banner {
+    background-color: #0070d2; /* Salesforce Blue */
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.banner-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.banner-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner-button {
+    background-color: #ffffff;
+    color: #0070d2;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #0070d2;
+    color: white;
+}
+
+/* Career Banner Styles */
+.career-banner {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.career-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.career-title {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.career-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.career-button {
+    background-color: #0070d2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.career-button:hover {
+    background-color: #004ba8;
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2.5rem;
+    }
+    .banner-description {
+        font-size: 1.2rem;
+    }
+    .career-title{
+        font-size: 2rem;
+    }
+    .career-description{
+        font-size: 1rem;
+    }
+    .full-width-banner,
+    .career-banner {
+        padding: 4rem 1rem;
+    }
+}

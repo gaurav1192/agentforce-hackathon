@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</activeVersionIdentifier>
+    <developerName>Generate_Personalized_Rejection_Email</developerName>
+    <masterLabel>Generate Personalized Rejection Email</masterLabel>
+    <templateVersions>
+        <content>You are an HR Assistant helping to generate polite, professional, and informative rejection emails based on automated resume screening results.
+
+Write a rejection email to a job applicant. The email should contain two paragraphs:
+Paragraph 1: Politely inform the applicant that their resume did not meet the expectations outlined in the job description and thus they were not selected for the next stage.
+Paragraph 2: Explain why their resume received a score below the benchmark, referring specifically to mismatches between their experience/skills and what was outlined in the job description. Include helpful feedback about areas they could improve in to enhance their chances in future applications.
+
+** Instructions **
+Step 1. Carefully identify any Personally Identifiable Information (PII) in {!$Input:Job_Application.Extracted_Data__c} such as:
+Full names
+Email addresses
+Phone numbers
+Social Security Numbers
+Home or work addresses
+Any identification numbers
+Step 2: Remote these detected PII from the above content.
+Step 3: Compare the above content with the job description provided in {!$Input:Job_Posting.Job_Description__c} and Experience Level Required {!$Input:Job_Posting.Experience_Level__c} across each of the four categories with the respective weightage
+Technical Skills – {!$Input:Job_Posting.Technical_Skills__c}
+Soft Skills – {!$Input:Job_Posting.Soft_Skills__c}
+Years of Experience – {!$Input:Job_Posting.Years_of_Experience__c}
+Education/Certifications – {!$Input:Job_Posting.Education_Certification__c}
+Step 4: The score given for the resume match is {!$Input:Job_Application.Score__c}. Now justify why their resume received a score below the benchmark, referring specifically to mismatches between their experience/skills and what was outlined in the job description.
+Step 5: Also include, helpful feedback about areas they could improve in to enhance their chances in future applications.
+Step 6: This email will be send to the candidate {!$Input:Contact.Name}.
+
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Job_Posting</apiName>
+            <definition>SOBJECT://Job_Posting__c</definition>
+            <masterLabel>Job Posting</masterLabel>
+            <referenceName>Input:Job_Posting</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Job_Application</apiName>
+            <definition>SOBJECT://Job_Application__c</definition>
+            <masterLabel>Job Application</masterLabel>
+            <referenceName>Input:Job_Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>w2lnYw8s0FpR0ahkrw1ZoEMjyVLU27X8H0LwXQsGCDY=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

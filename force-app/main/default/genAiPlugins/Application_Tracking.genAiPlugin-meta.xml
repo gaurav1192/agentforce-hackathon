@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This category covers the job application tracking part where the candidate can ask about the current status of their application</description>
+    <developerName>Application_Tracking</developerName>
+    <genAiFunctions>
+        <functionName>Get_Application_Status</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>1. When candidate asks about the status of their job application, fetch the required job application number from the conversation and then use the &quot;Get Application Status&quot; action to show the status of their application.</description>
+        <developerName>instruction_whencandid0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whencandid0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>2. If the candidate says that they don&apos;t know where the job application number is or asks where to find/get the application number, tell them to check their email they received while applying for the job.</description>
+        <developerName>instruction_ifthecandi1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecandi1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Application Tracking</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to retrieve the job application status based on the application number provided by the candidate.</scope>
+</GenAiPlugin>
