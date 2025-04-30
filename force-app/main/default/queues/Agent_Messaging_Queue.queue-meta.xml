@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Agent Messaging Queue</name>
+    <queueMembers>
+        <users>
+            <user>gsjangid777@gmail.com.agenthackathon</user>
+            <user>hs30897@gmail.com.agenthackathon</user>
+            <user>kirtivarshney222@gmail.com.agenthackathon</user>
+            <user>epic.a2a48a995cc6@orgfarm.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Agent_Routing_Configuration</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>
